@@ -227,13 +227,11 @@ p { margin: 0 0 1em; }
 .owner { margin: 0; }
 .owner-photo {
   aspect-ratio: 1 / 1; max-width: 440px; border-radius: var(--radius-lg); position: relative; overflow: hidden;
-  background: linear-gradient(160deg, var(--teal) 0%, var(--teal-mid) 100%);
-  display: grid; place-items: center; box-shadow: var(--shadow-lift);
+  background: var(--teal-light);
+  box-shadow: 14px 14px 0 var(--orange);
 }
-.owner-photo span { font-family: var(--font-heading); font-weight: 900; font-size: 6rem; color: rgba(255,255,255,.9); }
-.owner-photo::after { content: ""; position: absolute; right: -40px; bottom: -40px; width: 160px; height: 160px; border-radius: 50%; background: var(--orange); opacity: .9; }
-.owner-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
-.owner figcaption { margin-top: 16px; display: flex; flex-direction: column; }
+.owner-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.owner figcaption { margin-top: 28px; display: flex; flex-direction: column; }
 .owner figcaption b { font-family: var(--font-heading); font-size: 1.2rem; }
 .owner figcaption span { color: var(--slate); font-size: .95rem; }
 .about-copy > p { color: var(--slate); }

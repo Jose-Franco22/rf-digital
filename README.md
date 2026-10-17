@@ -22,8 +22,6 @@ To change text, edit it in `index.html` and its matching key in `i18n.js`.
 
 ## Before launch
 
-- [ ] Add a real photo: save it as `assets/img/jose.webp` and put
-      `<img src="assets/img/jose.webp" alt="Jose Franco">` inside `.owner-photo` (replaces the "JF" placeholder)
 - [ ] Have a native speaker review the Spanish in `i18n.js`
 - [ ] Hook the contact form to a form service (Formspree, Netlify Forms, etc.). For now it opens the visitor's email app.
 - [ ] Swap the demo/sample cards in "Recent work" for real client work (with each client's OK)
