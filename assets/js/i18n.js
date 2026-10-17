@@ -14,6 +14,8 @@ window.RF_ES = {
   "cta.pricing": "Ver precios",
   "cta.callToday": "Llámame hoy",
   "cta.seePlans": "Ver todos los planes",
+  "cta.notify": "Avísame",
+  "soon": "Próximamente",
 
   "hero.eyebrow": "Diseño web en Roma, TX",
   "hero.title": "Páginas web que trabajan tan duro como tú.",
@@ -148,7 +150,7 @@ window.RF_ES = {
   "form.need": "¿Qué necesitas?",
   "form.o1": "Página web",
   "form.o2": "Página + Citas",
-  "form.o3": "Página + Pedidos en línea",
+  "form.o3": "Página + Pedidos en línea (próximamente)",
   "form.o4": "Diseño de menú",
   "form.o5": "Todavía no sé",
   "form.msg": "Cuéntame de tu negocio",

@@ -12,6 +12,7 @@
   --border: #E3E8EB;
   --bg: #FFFFFF;
   --bg-alt: #F6F9FA;
+  --on-orange: #1C2B33;        /* text on orange stays dark in both themes */
 
   --font-heading: 'Nunito', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
@@ -106,7 +107,7 @@ p { margin: 0 0 1em; }
 .btn:hover { transform: translateY(-1px); }
 .btn-primary { background: var(--teal); color: #fff; }
 .btn-primary:hover { background: var(--teal-dark); }
-.btn-cta { background: var(--orange); color: var(--ink); }
+.btn-cta { background: var(--orange); color: var(--on-orange); }
 .btn-cta:hover { background: var(--orange-dark); }
 .btn-outline { background: var(--surface); color: var(--teal-text); border-color: var(--teal-text); }
 .btn-outline:hover { background: var(--teal-light); }
@@ -250,7 +251,7 @@ p { margin: 0 0 1em; }
 .why h3 { font-size: 1.15rem; margin-bottom: 4px; }
 .why p { color: var(--slate); font-size: 1rem; margin: 0; }
 .check { width: 40px; height: 40px; flex: none; border-radius: 50%; background: var(--orange); display: grid; place-items: center; }
-.check svg { width: 20px; height: 20px; fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.check svg { width: 20px; height: 20px; fill: none; stroke: var(--on-orange); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 
 /* How it works */
 .section-teal { background: var(--band); color: #fff; position: relative; overflow: hidden; }
@@ -258,7 +259,7 @@ p { margin: 0 0 1em; }
 .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; counter-reset: s; position: relative; }
 .steps li { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius-md); padding: 32px 28px; }
 .steps p { color: rgba(255,255,255,.82); margin: 0; font-size: 1rem; }
-.step-num { width: 48px; height: 48px; border-radius: 50%; background: var(--orange); color: var(--ink); display: grid; place-items: center; font: 900 1.4rem var(--font-heading); margin-bottom: 18px; }
+.step-num { width: 48px; height: 48px; border-radius: 50%; background: var(--orange); color: var(--on-orange); display: grid; place-items: center; font: 900 1.4rem var(--font-heading); margin-bottom: 18px; }
 
 /* Work */
 .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
@@ -267,6 +268,8 @@ p { margin: 0 0 1em; }
 .work-shot { height: 240px; position: relative; display: grid; place-items: center; overflow: hidden; }
 .work-body { padding: 24px 26px 28px; }
 .work-body p { color: var(--slate); font-size: 1rem; margin: 0; }
+.soon { position: absolute; top: 18px; right: 18px; font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--orange-dark); background: var(--orange-light); padding: 3px 10px; border-radius: 99px; }
+:root[data-theme="dark"] .soon { color: var(--orange); }
 .tag { display: inline-block; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--teal-text); background: var(--teal-light); padding: 3px 10px; border-radius: 99px; margin-bottom: 10px; }
 
 .shot-booking { background: linear-gradient(135deg, #1C2B33, #34474f); }
@@ -304,7 +307,9 @@ p { margin: 0 0 1em; }
 .price-card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 36px 30px; box-shadow: var(--shadow-card); display: flex; flex-direction: column; }
 .price-card .checklist { flex: 1; font-size: 1rem; }
 .price-card.featured { border: 2px solid var(--teal-text); box-shadow: var(--shadow-lift); }
-.badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--orange); color: var(--ink); font: 800 .8rem var(--font-heading); text-transform: uppercase; letter-spacing: .08em; padding: 6px 14px; border-radius: 99px; white-space: nowrap; }
+.badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--orange); color: var(--on-orange); font: 800 .8rem var(--font-heading); text-transform: uppercase; letter-spacing: .08em; padding: 6px 14px; border-radius: 99px; white-space: nowrap; }
+.badge-soon { background: var(--teal-light); color: var(--teal-text); box-shadow: inset 0 0 0 1px var(--teal-text); }
+.price-card.is-soon .price, .price-card.is-soon .checklist { opacity: .75; }
 .price { display: flex; align-items: baseline; gap: 4px; margin: 4px 0 0; }
 .amt { font: 900 3rem var(--font-heading); color: var(--teal-text); letter-spacing: -.02em; }
 .per { color: var(--slate); font-weight: 500; }
@@ -445,7 +450,7 @@ p { margin: 0 0 1em; }
   .mobile-bar a { display: flex; align-items: center; justify-content: center; gap: 8px; height: 56px; font: 800 1.05rem var(--font-heading); text-decoration: none; }
   .mobile-bar svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
   .mb-call { background: var(--teal); color: #fff; }
-  .mb-text { background: var(--orange); color: var(--ink); }
+  .mb-text { background: var(--orange); color: var(--on-orange); }
 }
 
 /* Theme toggle + logo swap */
