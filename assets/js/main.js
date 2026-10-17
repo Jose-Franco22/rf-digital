@@ -92,7 +92,7 @@
         .then(function (r) {
           if (!r.ok || String(r.data.success) !== 'true') throw new Error(r.data.message || 'Send failed');
           form.reset();
-          showStatus('ok', t('form.ok', "Thanks! Your message was sent. I'll get back to you soon."));
+          showStatus('ok', t('form.ok', "Thanks! Your message was sent. We'll get back to you soon."));
         })
         .catch(function () {
           var body = [
