@@ -21,6 +21,14 @@ python3 -m http.server 8000
 - `sitemap.xml`, `robots.txt`: for Google
 
 To change text, edit it in `index.html` and its matching key in `i18n.js`.
+
+**After changing CSS or JS, bump the `?v=` number** on the `styles.css`, `i18n.js`, and `main.js` links in
+every HTML file. GitHub Pages lets browsers cache those files for 10 minutes, and without a new number
+visitors can get new HTML with old styles:
+
+```bash
+V=$(date +%Y%m%d%H%M); sed -i '' -E "s#\?v=[A-Za-z0-9]+\"#?v=$V\"#g" index.html privacy.html 404.html
+```
 `?lang=es` opens the site in Spanish.
 
 ## Before launch
