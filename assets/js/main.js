@@ -56,5 +56,28 @@
     window.location.href = 'mailto:rfdigitaltx@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   });
 
+  // Light/dark theme. Follows the device until the visitor picks one, then remembers it.
+  var root = document.documentElement;
+  var themeBtn = document.querySelector('.theme-toggle');
+  var themeMeta = document.querySelector('meta[name="theme-color"]');
+  function applyTheme(t) {
+    root.setAttribute('data-theme', t);
+    themeMeta.content = t === 'dark' ? '#0B1A1F' : '#FFFFFF';
+    themeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+  applyTheme(root.getAttribute('data-theme') || 'light');
+  themeBtn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try { localStorage.setItem('rf-theme', next); } catch (e) {}
+  });
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  var onSystemChange = function (e) {
+    var saved = null;
+    try { saved = localStorage.getItem('rf-theme'); } catch (err) {}
+    if (!saved) applyTheme(e.matches ? 'dark' : 'light');
+  };
+  if (mq.addEventListener) mq.addEventListener('change', onSystemChange); else mq.addListener(onSystemChange);
+
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
