@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-title-es="Diseño web en Roma, TX | RF Digital" data-desc-es="RF Digital hace páginas web, citas en línea, pedidos en línea y menús para negocios locales en Roma y el Valle. Planes desde $29 al mes.">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Web Design in Roma, TX | RF Digital</title>
   <meta name="description" content="RF Digital builds websites, online booking, online ordering, and menus for local businesses in Roma and the Rio Grande Valley. Plans from $29/month.">
-  <link rel="canonical" href="https://rfdigitaltx.com/">
+  <link rel="canonical" href="https://jose-franco22.github.io/rf-digital/">
   <meta name="theme-color" content="#FFFFFF">
   <script>
     // Set the theme before the page paints so dark mode never flashes white.
@@ -20,8 +20,14 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="RF Digital | Websites for local businesses">
   <meta property="og:description" content="Websites, booking, online ordering, and menus for local businesses. Plans from $29/month. Based in Roma, TX.">
-  <meta property="og:url" content="https://rfdigitaltx.com/">
-  <meta property="og:image" content="https://rfdigitaltx.com/assets/img/og-image.png">
+  <meta property="og:url" content="https://jose-franco22.github.io/rf-digital/">
+  <meta property="og:image" content="https://jose-franco22.github.io/rf-digital/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="RF Digital: websites that work as hard as you do.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_US">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
@@ -37,7 +43,7 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "RF Digital",
-    "url": "https://rfdigitaltx.com/",
+    "url": "https://jose-franco22.github.io/rf-digital/",
     "telephone": "+1-956-844-2891",
     "email": "rfdigitaltx@gmail.com",
     "founder": "Jose Franco",
@@ -520,9 +526,12 @@
             <label for="f-msg" data-i18n="form.msg">Tell me about your business</label>
             <textarea id="f-msg" name="message" rows="4"></textarea>
           </div>
+          <!-- Honeypot: hidden from people, bots fill it in -->
+          <div class="hp" aria-hidden="true"><label for="f-hp">Leave this empty</label><input id="f-hp" name="_honey" tabindex="-1" autocomplete="off"></div>
           <p class="form-error" id="form-error" role="alert" hidden data-i18n="form.err">Please add your name and phone number.</p>
           <button class="btn btn-cta full" type="submit" data-i18n="form.send">Send Message</button>
-          <p class="form-hint" data-i18n="form.hint">This opens your email app with your message ready to send.</p>
+          <p class="form-status" id="form-status" role="status" hidden></p>
+          <p class="form-hint" data-i18n="form.hint">I'll only use your info to reply to you. See the <a href="privacy.html">privacy policy</a>.</p>
         </form>
       </div>
     </section>
@@ -567,6 +576,7 @@
     </div>
     <div class="container footer-bottom">
       <p>© <span id="year">2026</span> RF Digital. <span data-i18n="foot.rights">All rights reserved.</span></p>
+      <a href="privacy.html" data-i18n="foot.privacy">Privacy Policy</a>
     </div>
   </footer>
 

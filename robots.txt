@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jose-franco22.github.io/rf-digital/sitemap.xml

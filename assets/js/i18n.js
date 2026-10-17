@@ -156,7 +156,10 @@ window.RF_ES = {
   "form.msg": "Cuéntame de tu negocio",
   "form.err": "Por favor pon tu nombre y tu número de teléfono.",
   "form.send": "Enviar mensaje",
-  "form.hint": "Esto abre tu app de correo con tu mensaje listo para enviar.",
+  "form.hint": "Solo uso tu información para contestarte. Lee el <a href=\"privacy.html\">aviso de privacidad</a>.",
+  "form.sending": "Enviando…",
+  "form.ok": "¡Gracias! Tu mensaje se envió. Te contesto pronto.",
+  "form.fail": "Perdón, no se pudo enviar. Llama o manda texto al <a href=\"tel:+19568442891\">(956) 844-2891</a>, o <a class=\"js-mailto\">mándalo por correo</a>.",
 
   "close.title": "Que te encuentren. Que te reserven. Que te pidan.",
 
@@ -164,7 +167,13 @@ window.RF_ES = {
   "foot.links": "Enlaces",
   "foot.contact": "Contacto",
   "foot.loc": "Roma, TX",
-  "foot.rights": "Todos los derechos reservados."
+  "foot.rights": "Todos los derechos reservados.",
+  "foot.privacy": "Aviso de privacidad",
+
+  "priv.back": "Volver al inicio",
+  "nf.title": "No encontramos esa página.",
+  "nf.lead": "Puede que el enlace esté mal o que la página se haya movido.",
+  "nf.home": "Ir al inicio"
 };
 
 (function () {
@@ -172,11 +181,14 @@ window.RF_ES = {
   var original = new Map();
   nodes.forEach(function (el) { original.set(el, el.innerHTML); });
 
+  // Each page gives its Spanish title/description on <html data-title-es data-desc-es>.
+  var descTag = document.querySelector('meta[name="description"]');
+  var rootEl = document.documentElement;
   var meta = {
-    en: { title: document.title, desc: document.querySelector('meta[name="description"]').content },
+    en: { title: document.title, desc: descTag ? descTag.content : '' },
     es: {
-      title: 'Diseño web en Roma, TX | RF Digital',
-      desc: 'RF Digital hace páginas web, citas en línea, pedidos en línea y menús para negocios locales en Roma y el Valle. Planes desde $29 al mes.'
+      title: rootEl.getAttribute('data-title-es') || document.title,
+      desc: rootEl.getAttribute('data-desc-es') || (descTag ? descTag.content : '')
     }
   };
 
@@ -188,7 +200,7 @@ window.RF_ES = {
     });
     document.documentElement.lang = lang;
     document.title = meta[lang].title;
-    document.querySelector('meta[name="description"]').content = meta[lang].desc;
+    if (descTag) descTag.content = meta[lang].desc;
     document.querySelectorAll('[data-lang]').forEach(function (b) {
       b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang));
     });
