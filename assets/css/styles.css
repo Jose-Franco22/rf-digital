@@ -196,6 +196,7 @@ p { margin: 0 0 1em; }
 
 /* Services */
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card-grid-4 { grid-template-columns: repeat(2, 1fr); }
 .card {
   position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md);
   padding: 32px 28px; box-shadow: var(--shadow-card); transition: transform .2s, box-shadow .2s, border-color .2s;
@@ -244,6 +245,7 @@ p { margin: 0 0 1em; }
 
 /* Work */
 .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.work-grid-2 { grid-template-columns: repeat(2, 1fr); }
 .work-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-card); display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
 .work-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
 .work-shot { height: 240px; position: relative; display: grid; place-items: center; overflow: hidden; }
@@ -285,6 +287,7 @@ p { margin: 0 0 1em; }
 
 /* Pricing */
 .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+.price-grid.price-grid-single { grid-template-columns: minmax(0, 420px); justify-content: center; }
 .price-card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 36px 30px; box-shadow: var(--shadow-card); display: flex; flex-direction: column; }
 .price-card .checklist { flex: 1; font-size: 1rem; }
 .price-card.featured { border: 2px solid var(--teal-text); box-shadow: var(--shadow-lift); }
