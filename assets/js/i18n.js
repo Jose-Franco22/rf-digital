@@ -235,7 +235,7 @@ window.RF_ES = {
   "evp.3.l3": "Invitación para la fiesta",
   "ev.note": "Invitaciones digitales desde $35. Los precios de los paquetes son por el diseño. Las lonas impresas cuestan $3 por pie cuadrado, igual que las de negocio.",
   "work.tagClient": "Cliente",
-  "spot.d": "Un restaurante de mariscos en Rio Grande City. Hicimos un menú bilingüe de una página, una portada que combina y un letrero con código QR para las mesas, además de videos cortos para promocionarlo.",
+  "spot.d": "Un restaurante de mariscos en Rio Grande City. Hicimos un menú bilingüe de una página, una portada que combina, un letrero con código QR para las mesas, un menú para el celular y un video anuncio para promocionarlo.",
   "spot.1": "Portada del menú",
   "spot.2": "Menú de una página",
   "spot.3": "Letrero con código QR",
@@ -248,7 +248,10 @@ window.RF_ES = {
   "vid.6": "Truco de menú: marca tu platillo estrella",
   "vid.7": "Tu menú en 3 pasos",
   "vid.8": "Anuncio para mueblería: Franco's",
-  "vid.9": "Anuncio para mueblería: Franco's, versión 2"
+  "vid.9": "Anuncio para mueblería: Franco's, versión 2",
+  "spot.4": "Menú para el celular (PDF)",
+  "spot.v.t": "Video anuncio",
+  "spot.v.d": "Un anuncio de 15 segundos para Facebook e Instagram que presume sus mejores platillos y charolas para llevar, y termina con el teléfono, la dirección y el horario."
 };
 
 (function () {
