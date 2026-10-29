@@ -75,7 +75,7 @@
         phone: d.phone.value.trim(),
         interested_in: d.need.value,
         message: d.message.value.trim(),
-        _subject: 'Website inquiry from ' + d.name.value.trim(),
+        _subject: 'Marketing inquiry from ' + d.name.value.trim(),
         _template: 'table'
       };
 
