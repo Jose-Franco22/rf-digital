@@ -54,7 +54,7 @@ window.RF_ES = {
   "how.3.d": "Recibes archivos listos para publicar, imprimir o usar como anuncios. Tus clientes empiezan a notarte y a llegar.",
   "work.eyebrow": "Trabajos recientes",
   "work.title": "Mira cómo se podría ver tu negocio.",
-  "work.lead": "Restaurantes, food trucks, barberías, salones, boutiques y otros negocios locales. Aquí tienes algunos ejemplos de lo que hacemos.",
+  "work.lead": "Menús, letreros y videos reales que hemos hecho para negocios locales. Toca cualquier imagen para verla en grande, o reproduce un video.",
   "work.tagSample": "Muestra",
   "work.1.t": "Fotos de productos",
   "work.1.d": "Gráficos limpios de tus productos con tus colores y precios, listos para tu feed, tu tienda en línea o una pantalla en el mostrador.",
@@ -123,8 +123,6 @@ window.RF_ES = {
   "nf.lead": "Puede que el enlace esté mal o que la página se haya movido.",
   "nf.home": "Ir al inicio",
   "cta.work": "Ver trabajos",
-  "work.3.t": "Menú de restaurante + QR",
-  "work.3.d": "Un menú impreso fácil de leer, más un menú igual en el celular que los clientes abren escaneando un código QR en la mesa.",
   "svc.c1.t": "Anuncios y redes sociales",
   "svc.c1.d": "Posts, anuncios y videos que hacen que la gente deje de deslizar y venga a ver lo que ofreces.",
   "svc.c1.l1": "Gráficos para mostrar tus productos",
@@ -240,7 +238,23 @@ window.RF_ES = {
   "evp.3.l1": "Letrero de jardín con foto",
   "evp.3.l2": "Lona",
   "evp.3.l3": "Invitación para la fiesta",
-  "ev.note": "Invitaciones digitales desde $35. Los precios de los paquetes son por el diseño. Las lonas impresas cuestan $3 por pie cuadrado, igual que las de negocio."
+  "ev.note": "Invitaciones digitales desde $35. Los precios de los paquetes son por el diseño. Las lonas impresas cuestan $3 por pie cuadrado, igual que las de negocio.",
+  "work.tagClient": "Cliente",
+  "spot.d": "Un restaurante de mariscos en Rio Grande City. Hicimos un menú bilingüe de una página, una portada que combina y un letrero con código QR para las mesas, además de videos cortos para promocionarlo.",
+  "spot.1": "Portada del menú",
+  "spot.2": "Menú de una página",
+  "spot.3": "Letrero con código QR",
+  "work.videos": "Videos y reels",
+  "work.samples": "Más muestras",
+  "vid.1": "Menú: El Rey del Catán",
+  "vid.2": "\"Diseñado para vender\"",
+  "vid.3": "Lo que hace que un menú venda",
+  "vid.4": "Errores comunes en los menús",
+  "vid.5": "Así se arma un menú",
+  "vid.6": "Truco de menú: marca tu platillo estrella",
+  "vid.7": "Tu menú en 3 pasos",
+  "vid.8": "Anuncio para mueblería: Franco's",
+  "vid.9": "Anuncio para mueblería: Franco's, versión 2"
 };
 
 (function () {
