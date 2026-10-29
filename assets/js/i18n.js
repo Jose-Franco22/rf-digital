@@ -212,7 +212,7 @@ window.RF_ES = {
   "ev.title": "Que tu fiesta sea inolvidable.",
   "ev.lead": "No solo para negocios. Diseñamos invitaciones, lonas, letreros y camisetas para los días importantes de tu familia, en inglés, en español o en los dos.",
   "ev.c1.t": "Quinceañeras y bodas",
-  "ev.c1.d": "Invitaciones, lonas para el fondo, letreros de bienvenida, acomodo de mesas, stickers para recuerdos y camisetas para la corte.",
+  "ev.c1.d": "Invitaciones, lonas para el fondo, letreros de bienvenida, stickers para recuerdos y camisetas para la corte.",
   "ev.c2.t": "Cumpleaños y baby showers",
   "ev.c2.d": "Fondos temáticos, lonas de \"Feliz cumpleaños\", revelación de género, invitaciones y stickers para los recuerdos.",
   "ev.c3.t": "Graduaciones",
