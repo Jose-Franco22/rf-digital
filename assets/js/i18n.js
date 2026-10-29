@@ -247,11 +247,14 @@ window.RF_ES = {
   "vid.5": "Así se arma un menú",
   "vid.6": "Truco de menú: marca tu platillo estrella",
   "vid.7": "Tu menú en 3 pasos",
-  "vid.8": "Anuncio para mueblería: Franco's",
-  "vid.9": "Anuncio para mueblería: Franco's, versión 2",
   "spot.4": "Menú para el celular (PDF)",
   "spot.v.t": "Video anuncio",
-  "spot.v.d": "Un anuncio de 15 segundos para Facebook e Instagram que presume sus mejores platillos y charolas para llevar, y termina con el teléfono, la dirección y el horario."
+  "spot.v.d": "Un anuncio de 15 segundos para Facebook e Instagram que presume sus mejores platillos y charolas para llevar, y termina con el teléfono, la dirección y el horario.",
+  "fr.d": "Una mueblería y tienda de aire acondicionado en Roma, TX. Hicimos su nuevo logo, una lona para su local y video anuncios que presumen sus recámaras.",
+  "fr.1": "Lona",
+  "fr.2": "Logo nuevo",
+  "fr.v1": "Video anuncio: recámara",
+  "fr.v2": "Video anuncio: recámara, versión 2"
 };
 
 (function () {
