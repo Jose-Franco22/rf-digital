@@ -21,7 +21,7 @@
   <meta property="og:title" content="RF Digital | Design for local businesses, parties &amp; events">
   <meta property="og:description" content="Ads, social posts, banners, menus, and invitations for local businesses, parties, and events.">
   <meta property="og:url" content="https://jose-franco22.github.io/rf-digital/">
-  <meta property="og:image" content="https://jose-franco22.github.io/rf-digital/assets/img/og-image.png?v=202610301400">
+  <meta property="og:image" content="https://jose-franco22.github.io/rf-digital/assets/img/og-image.png?v=202610301410">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="RF Digital: make it stand out. Ads, print, menus, parties and events.">
@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=202610301400">
+  <link rel="stylesheet" href="assets/css/styles.css?v=202610301410">
 
   <script type="application/ld+json">
   {
@@ -52,6 +52,7 @@
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Skip to main content</a>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
   <!-- ===================== HEADER ===================== -->
   <header class="site-header" id="top">
@@ -154,6 +155,22 @@
       </div>
     </section>
 
+    <!-- ===================== PROOF ===================== -->
+    <section class="proof" aria-label="Clients and promises">
+      <div class="container proof-inner">
+        <div class="proof-clients">
+          <span data-i18n="proof.label">Proud to work with</span>
+          <img src="assets/img/work/rey-del-catan-logo.webp" alt="El Rey del Catán" width="496" height="496" loading="lazy">
+          <img src="assets/img/work/francos-logo.webp" alt="Franco's Furniture &amp; Air Conditioning" width="1024" height="1024" loading="lazy">
+        </div>
+        <ul class="proof-facts">
+          <li><b data-i18n="proof.1.t">1–2 weeks</b><span data-i18n="proof.1.d">typical turnaround after deposit</span></li>
+          <li><b data-i18n="proof.2.t">Usually same day</b><span data-i18n="proof.2.d">replies to your message</span></li>
+          <li><b data-i18n="proof.3.t">English &amp; Spanish</b><span data-i18n="proof.3.d">design in either language, or both</span></li>
+        </ul>
+      </div>
+    </section>
+
     <!-- ===================== SERVICES ===================== -->
     <section class="section" id="services">
       <div class="container">
@@ -163,32 +180,9 @@
           <p data-i18n="svc.lead">Most people decide where to eat or shop from their phone. If your posts, ads, and menu don't catch their eye, they move on to the next one. We make the marketing that gets them through your door.</p>
         </div>
 
-        <div class="card-grid card-grid-4">
+        <div class="svc-hub">
           <article class="card svc-group">
-            <div class="card-icon"><svg viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div>
-            <h3 data-i18n="svc.c1.t">Ads &amp; Social Media</h3>
-            <p data-i18n="svc.c1.d">Posts, ads, and videos that make people stop scrolling and come see what you offer.</p>
-            <ul class="checklist">
-              <li data-i18n="svc.c1.l1">Product showcase graphics</li>
-              <li data-i18n="svc.c1.l2">Ads for Facebook, Instagram &amp; TikTok</li>
-              <li data-i18n="svc.c1.l3">Social media posts &amp; stories</li>
-              <li data-i18n="svc.c1.l4">Short videos &amp; reels</li>
-              <li data-i18n="svc.c1.l5">Social profile makeover</li>
-            </ul>
-          </article>
-          <article class="card svc-group">
-            <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg></div>
-            <h3 data-i18n="svc.c2.t">Branding &amp; Getting Found</h3>
-            <p data-i18n="svc.c2.d">A look people remember, and an easy way for new customers to find you.</p>
-            <ul class="checklist">
-              <li data-i18n="svc.c2.l1">Logo &amp; brand kit</li>
-              <li data-i18n="svc.c2.l2">Business cards</li>
-              <li data-i18n="svc.c2.l3">Google Business Profile setup</li>
-              <li data-i18n="svc.c2.l4">Review QR cards for your register</li>
-            </ul>
-          </article>
-          <article class="card svc-group">
-            <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
+            <div class="svc-thumb svc-thumb-top"><img src="assets/img/work/rey-del-catan-menu.webp" alt="" loading="lazy"></div>
             <h3 data-i18n="svc.c3.t">Menus</h3>
             <p data-i18n="svc.c3.d">Menus that are easy to read on the table, on the wall, and on a phone.</p>
             <ul class="checklist">
@@ -197,9 +191,13 @@
               <li data-i18n="svc.c3.l3">TV menu boards</li>
               <li data-i18n="svc.c3.l4">Table tents &amp; counter signs</li>
             </ul>
+            <div class="card-links">
+              <a href="#work" data-filter="menus"><span data-i18n="svc.samples">View Samples</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="#contact" data-need="Menu" data-i18n="svc.c3.ask">Ask about menus</a>
+            </div>
           </article>
           <article class="card svc-group">
-            <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
+            <div class="svc-thumb"><img src="assets/img/work/rey-del-catan-qr.webp" alt="" loading="lazy"></div>
             <h3 data-i18n="svc.c4.t">Print &amp; Signs</h3>
             <p data-i18n="svc.c4.d">Everything with your name on it, designed to match your ads so your brand looks the same everywhere.</p>
             <ul class="checklist">
@@ -210,6 +208,56 @@
               <li data-i18n="svc.c4.l5">Loyalty punch cards &amp; gift certificates</li>
               <li data-i18n="svc.c4.l6">Door hangers &amp; yard signs</li>
             </ul>
+            <div class="card-links">
+              <a href="#work" data-filter="signs"><span data-i18n="svc.samples">View Samples</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="#contact" data-need="Print" data-i18n="svc.c4.ask">Ask about print &amp; signs</a>
+            </div>
+          </article>
+          <article class="card svc-group">
+            <div class="svc-thumb"><img src="assets/video/posters/el-rey-del-catan-ad.jpg" alt="" loading="lazy"></div>
+            <h3 data-i18n="svc.c1.t">Ads &amp; Social Media</h3>
+            <p data-i18n="svc.c1.d">Posts, ads, and videos that make people stop scrolling and come see what you offer.</p>
+            <ul class="checklist">
+              <li data-i18n="svc.c1.l1">Product showcase graphics</li>
+              <li data-i18n="svc.c1.l2">Ads for Facebook, Instagram &amp; TikTok</li>
+              <li data-i18n="svc.c1.l3">Social media posts &amp; stories</li>
+              <li data-i18n="svc.c1.l4">Short videos &amp; reels</li>
+              <li data-i18n="svc.c1.l5">Social profile makeover</li>
+            </ul>
+            <div class="card-links">
+              <a href="#work" data-filter="ads"><span data-i18n="svc.samples">View Samples</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="#contact" data-need="Ads" data-i18n="svc.c1.ask">Ask about ads</a>
+            </div>
+          </article>
+          <article class="card svc-group">
+            <div class="svc-thumb svc-thumb-logo"><img src="assets/img/work/francos-logo.webp" alt="" loading="lazy"></div>
+            <h3 data-i18n="svc.c2.t">Branding &amp; Getting Found</h3>
+            <p data-i18n="svc.c2.d">A look people remember, and an easy way for new customers to find you.</p>
+            <ul class="checklist">
+              <li data-i18n="svc.c2.l1">Logo &amp; brand kit</li>
+              <li data-i18n="svc.c2.l2">Business cards</li>
+              <li data-i18n="svc.c2.l3">Google Business Profile setup</li>
+              <li data-i18n="svc.c2.l4">Review QR cards for your register</li>
+            </ul>
+            <div class="card-links">
+              <a href="#work" data-filter="branding"><span data-i18n="svc.samples">View Samples</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="#contact" data-need="Branding" data-i18n="svc.c2.ask">Ask about branding</a>
+            </div>
+          </article>
+          <article class="card svc-group">
+            <div class="svc-thumb svc-thumb-invite" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4-3.9-3.8 5.4-.8z"/></svg></div>
+            <h3 data-i18n="svc.c5.t">Events &amp; Decor</h3>
+            <p data-i18n="svc.c5.d">Everything for the big day, all in one matching look.</p>
+            <ul class="checklist">
+              <li data-i18n="svc.c5.l1">Printed &amp; digital invitations</li>
+              <li data-i18n="svc.c5.l2">Backdrop &amp; party banners</li>
+              <li data-i18n="svc.c5.l3">Welcome signs &amp; yard signs</li>
+              <li data-i18n="svc.c5.l4">Favor stickers</li>
+            </ul>
+            <div class="card-links">
+              <a href="#events"><span data-i18n="svc.c5.see">See Event Packs</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="#contact" data-need="Event" data-i18n="svc.c5.ask">Ask about your event</a>
+            </div>
           </article>
         </div>
 
@@ -270,7 +318,7 @@
               <li data-i18n="evp.1.l2">Party banner</li>
               <li data-i18n="evp.1.l3">Welcome sign</li>
             </ul>
-            <a class="btn btn-primary" href="#contact" data-i18n="cta.start">Get Started</a>
+            <a class="btn btn-primary" href="#contact" data-need="Event" data-i18n="cta.start">Get Started</a>
           </article>
           <article class="price-card">
             <h3 data-i18n="evp.2.t">Quinceañera Pack</h3>
@@ -281,7 +329,7 @@
               <li data-i18n="evp.2.l3">Welcome sign</li>
               <li data-i18n="evp.2.l4">Favor stickers</li>
             </ul>
-            <a class="btn btn-primary" href="#contact" data-i18n="cta.start">Get Started</a>
+            <a class="btn btn-primary" href="#contact" data-need="Event" data-i18n="cta.start">Get Started</a>
           </article>
           <article class="price-card">
             <h3 data-i18n="evp.3.t">Graduation Pack</h3>
@@ -291,7 +339,7 @@
               <li data-i18n="evp.3.l2">Banner</li>
               <li data-i18n="evp.3.l3">Party invitation</li>
             </ul>
-            <a class="btn btn-primary" href="#contact" data-i18n="cta.start">Get Started</a>
+            <a class="btn btn-primary" href="#contact" data-need="Event" data-i18n="cta.start">Get Started</a>
           </article>
         </div>
         <p class="price-terms" data-i18n="ev.note">We also make digital invitations and printed banners. Ask us for a quote on any pack.</p>
@@ -399,113 +447,111 @@
           <p data-i18n="work.lead">Real menus, signs, and videos we've made for local businesses. Tap any image to see it full size, or play a video.</p>
         </div>
 
-        <!-- Real client: El Rey del Catán -->
-        <div class="spotlight">
-          <div class="spot-head">
-            <span class="tag" data-i18n="work.tagClient">Client</span>
-            <h3>El Rey del Catán</h3>
-            <p data-i18n="spot.d">A seafood restaurant in Rio Grande City. We made a bilingual one-page menu, a matching cover, a QR sign for the tables, a phone menu, and a video ad to promote it.</p>
-          </div>
-          <div class="spot-gallery">
-          <figure class="spot-item">
-            <a href="assets/img/work/rey-del-catan-cover.webp" target="_blank" rel="noopener"><img src="assets/img/work/rey-del-catan-cover.webp" alt="Menu cover, El Rey del Catán" width="1200" height="1553" loading="lazy"></a>
-            <figcaption data-i18n="spot.1">Menu cover</figcaption>
-          </figure>
-          <figure class="spot-item">
-            <a href="assets/img/work/rey-del-catan-menu.webp" target="_blank" rel="noopener"><img src="assets/img/work/rey-del-catan-menu.webp" alt="One-page menu, El Rey del Catán" width="1200" height="1553" loading="lazy"></a>
-            <figcaption data-i18n="spot.2">One-page menu</figcaption>
-          </figure>
-          <figure class="spot-item">
-            <a href="assets/img/work/rey-del-catan-qr.webp" target="_blank" rel="noopener"><img src="assets/img/work/rey-del-catan-qr.webp" alt="QR code sign, El Rey del Catán" width="1200" height="1377" loading="lazy"></a>
-            <figcaption data-i18n="spot.3">QR code sign</figcaption>
-          </figure>
-          <figure class="spot-item">
-            <a href="assets/docs/el-rey-del-catan-menu.pdf" target="_blank" rel="noopener"><img src="assets/img/work/rey-del-catan-phone-menu.webp" alt="Phone menu, El Rey del Catán" width="433" height="900" loading="lazy"></a>
-            <figcaption data-i18n="spot.4">Phone menu (PDF)</figcaption>
-          </figure>
-          </div>
-          <div class="spot-video">
-            <video src="assets/video/el-rey-del-catan-ad.mp4" poster="assets/video/posters/el-rey-del-catan-ad.jpg" controls playsinline preload="none" width="405" height="720"></video>
-            <div>
-              <h4 data-i18n="spot.v.t">Video ad</h4>
-              <p data-i18n="spot.v.d">A 15-second ad for Facebook and Instagram that shows off their best plates and to-go trays, then ends with the phone number, address, and hours.</p>
-            </div>
-          </div>
+        <div class="g-filters" role="group" aria-label="Filter work">
+          <button type="button" data-g-filter="all" aria-pressed="true" data-i18n="g.f.all">All</button>
+          <button type="button" data-g-filter="menus" aria-pressed="false" data-i18n="g.f.menus">Menus</button>
+          <button type="button" data-g-filter="signs" aria-pressed="false" data-i18n="g.f.signs">Signs &amp; Banners</button>
+          <button type="button" data-g-filter="ads" aria-pressed="false" data-i18n="g.f.ads">Ads &amp; Social</button>
+          <button type="button" data-g-filter="branding" aria-pressed="false" data-i18n="g.f.branding">Branding</button>
+          <button type="button" data-g-filter="events" aria-pressed="false" data-i18n="g.f.events">Events</button>
         </div>
 
-        <!-- Real client: Franco's -->
-        <div class="spotlight">
-          <div class="spot-head">
-            <span class="tag" data-i18n="work.tagClient">Client</span>
-            <h3>Franco's Furniture &amp; Air Conditioning</h3>
-            <p data-i18n="fr.d">A furniture and air conditioning store in Roma, TX. We made their new logo, room images for their showroom furniture, and video ads that show off their bedroom sets.</p>
-          </div>
-          <div class="spot-brand">
-            <figure class="spot-item">
-              <a href="assets/img/work/francos-logo.webp" target="_blank" rel="noopener"><img src="assets/img/work/francos-logo.webp" alt="Franco's logo" width="1024" height="1024" loading="lazy"></a>
-              <figcaption data-i18n="fr.2">New logo</figcaption>
-            </figure>
-          </div>
-          <div class="spot-rooms">
-            <figure class="spot-item">
-              <a href="assets/img/work/francos-dining.webp" target="_blank" rel="noopener"><img src="assets/img/work/francos-dining.webp" alt="Dining room set with tufted chairs" width="1024" height="1536" loading="lazy"></a>
-              <figcaption data-i18n="fr.r1">Dining room</figcaption>
-            </figure>
-            <figure class="spot-item">
-              <a href="assets/img/work/francos-living.webp" target="_blank" rel="noopener"><img src="assets/img/work/francos-living.webp" alt="Gray sectional sofa with a marble coffee table" width="1024" height="1536" loading="lazy"></a>
-              <figcaption data-i18n="fr.r2">Living room</figcaption>
-            </figure>
-            <figure class="spot-item">
-              <a href="assets/img/work/francos-vanity.webp" target="_blank" rel="noopener"><img src="assets/img/work/francos-vanity.webp" alt="White lighted vanity with a pink tufted stool" width="1024" height="1024" loading="lazy"></a>
-              <figcaption data-i18n="fr.r3">Vanity</figcaption>
-            </figure>
-            <figure class="spot-item">
-              <a href="assets/img/work/francos-kitchen.webp" target="_blank" rel="noopener"><img src="assets/img/work/francos-kitchen.webp" alt="Oak kitchen cabinets with a stainless range" width="1536" height="1024" loading="lazy"></a>
-              <figcaption data-i18n="fr.r4">Kitchen</figcaption>
-            </figure>
-          </div>
-          <div class="spot-videos">
-            <figure class="vid">
-              <video src="assets/video/call-text-1.mp4" poster="assets/video/posters/call-text-1.jpg" controls playsinline preload="none" width="405" height="720"></video>
-              <figcaption data-i18n="fr.v1">Video ad: bedroom set</figcaption>
-            </figure>
-            <figure class="vid">
-              <video src="assets/video/call-text-2.mp4" poster="assets/video/posters/call-text-2.jpg" controls playsinline preload="none" width="405" height="720"></video>
-              <figcaption data-i18n="fr.v2">Video ad: bedroom set, version 2</figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <h3 class="work-sub" data-i18n="work.videos">Videos &amp; reels</h3>
-        <div class="video-grid">
-          <figure class="vid">
-            <video src="assets/video/menu-showcase-1.mp4" poster="assets/video/posters/menu-showcase-1.jpg" controls playsinline preload="none" width="405" height="720"></video>
-            <figcaption data-i18n="vid.1">Menu showcase: El Rey del Catán</figcaption>
-          </figure>
-          <figure class="vid">
-            <video src="assets/video/menu-showcase-2.mp4" poster="assets/video/posters/menu-showcase-2.jpg" controls playsinline preload="none" width="405" height="720"></video>
-            <figcaption data-i18n="vid.2">"Designed to sell"</figcaption>
-          </figure>
-          <figure class="vid">
-            <video src="assets/video/menu-showcase-3.mp4" poster="assets/video/posters/menu-showcase-3.jpg" controls playsinline preload="none" width="405" height="720"></video>
-            <figcaption data-i18n="vid.3">What makes a menu sell</figcaption>
-          </figure>
-          <figure class="vid">
-            <video src="assets/video/menu-showcase-4.mp4" poster="assets/video/posters/menu-showcase-4.jpg" controls playsinline preload="none" width="405" height="720"></video>
-            <figcaption data-i18n="vid.4">Common menu mistakes</figcaption>
-          </figure>
-          <figure class="vid">
-            <video src="assets/video/menu-showcase-5.mp4" poster="assets/video/posters/menu-showcase-5.jpg" controls playsinline preload="none" width="405" height="720"></video>
-            <figcaption data-i18n="vid.5">How a menu comes together</figcaption>
-          </figure>
-          <figure class="vid">
-            <video src="assets/video/menu-tip-1.mp4" poster="assets/video/posters/menu-tip-1.jpg" controls playsinline preload="none" width="405" height="720"></video>
-            <figcaption data-i18n="vid.6">Menu tip: mark your star dish</figcaption>
-          </figure>
-          <figure class="vid">
-            <video src="assets/video/menu-tip-2.mp4" poster="assets/video/posters/menu-tip-2.jpg" controls playsinline preload="none" width="405" height="720"></video>
-            <figcaption data-i18n="vid.7">Your menu in 3 steps</figcaption>
-          </figure>
+        <div class="gallery" id="gallery">
+          <a class="g-item" href="assets/img/work/rey-del-catan-menu.webp" target="_blank" rel="noopener" data-cat="menus" data-need="Menu" data-kind="image">
+            <img src="assets/img/work/rey-del-catan-menu.webp" alt="One-page menu, El Rey del Catán" width="1200" height="1553" loading="lazy">
+            
+            <span class="g-over"><small>El Rey del Catán</small><b data-i18n="spot.2">One-page menu</b><span class="g-detail" data-i18n="g.menu">Bilingual one-page menu with photos, prices, and a QR code.</span></span>
+          </a>
+          <a class="g-item" href="assets/img/work/rey-del-catan-cover.webp" target="_blank" rel="noopener" data-cat="menus" data-need="Menu" data-kind="image">
+            <img src="assets/img/work/rey-del-catan-cover.webp" alt="Menu cover, El Rey del Catán" width="1200" height="1553" loading="lazy">
+            
+            <span class="g-over"><small>El Rey del Catán</small><b data-i18n="spot.1">Menu cover</b><span class="g-detail" data-i18n="g.cover">A cover that matches their bilingual menu.</span></span>
+          </a>
+          <a class="g-item" href="assets/img/work/rey-del-catan-phone-menu.webp" target="_blank" rel="noopener" data-cat="menus" data-need="Menu" data-kind="image" data-pdf="assets/docs/el-rey-del-catan-menu.pdf">
+            <img src="assets/img/work/rey-del-catan-phone-menu.webp" alt="Phone menu, El Rey del Catán" width="433" height="900" loading="lazy">
+            
+            <span class="g-over"><small>El Rey del Catán</small><b data-i18n="spot.4">Phone menu (PDF)</b><span class="g-detail" data-i18n="g.phone">A menu made to read on a phone, with a PDF customers can open.</span></span>
+          </a>
+          <a class="g-item" href="assets/img/work/rey-del-catan-qr.webp" target="_blank" rel="noopener" data-cat="signs" data-need="Print" data-kind="image">
+            <img src="assets/img/work/rey-del-catan-qr.webp" alt="QR code sign, El Rey del Catán" width="1200" height="1377" loading="lazy">
+            
+            <span class="g-over"><small>El Rey del Catán</small><b data-i18n="spot.3">QR code sign</b><span class="g-detail" data-i18n="g.qr">A table sign customers scan to see the menu.</span></span>
+          </a>
+          <a class="g-item g-logo" href="assets/img/work/francos-logo.webp" target="_blank" rel="noopener" data-cat="branding" data-need="Branding" data-kind="image">
+            <img src="assets/img/work/francos-logo.webp" alt="Franco's logo" width="1024" height="1024" loading="lazy">
+            
+            <span class="g-over"><small>Franco's Furniture &amp; Air Conditioning</small><b data-i18n="fr.2">New logo</b><span class="g-detail" data-i18n="g.logo">A new logo for a furniture and air conditioning store.</span></span>
+          </a>
+          <a class="g-item" href="assets/video/el-rey-del-catan-ad.mp4" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="video">
+            <img src="assets/video/posters/el-rey-del-catan-ad.jpg" alt="Video ad, El Rey del Catán" width="405" height="720" loading="lazy">
+            <svg class="g-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="g-over"><small>El Rey del Catán</small><b data-i18n="spot.v.t">Video ad</b><span class="g-detail" data-i18n="spot.v.d">A 15-second ad for Facebook and Instagram that shows off their best plates and to-go trays, then ends with the phone number, address, and hours.</span></span>
+          </a>
+          <a class="g-item" href="assets/img/work/francos-dining.webp" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="image">
+            <img src="assets/img/work/francos-dining.webp" alt="Dining room set with tufted chairs" width="1024" height="1536" loading="lazy">
+            
+            <span class="g-over"><small>Franco's Furniture &amp; Air Conditioning</small><b data-i18n="fr.r1">Dining room</b><span class="g-detail" data-i18n="g.room">A room image made for their showroom furniture.</span></span>
+          </a>
+          <a class="g-item" href="assets/img/work/francos-living.webp" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="image">
+            <img src="assets/img/work/francos-living.webp" alt="Gray sectional sofa with a marble coffee table" width="1024" height="1536" loading="lazy">
+            
+            <span class="g-over"><small>Franco's Furniture &amp; Air Conditioning</small><b data-i18n="fr.r2">Living room</b><span class="g-detail" data-i18n="g.room">A room image made for their showroom furniture.</span></span>
+          </a>
+          <a class="g-item" href="assets/img/work/francos-vanity.webp" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="image">
+            <img src="assets/img/work/francos-vanity.webp" alt="White lighted vanity with a pink tufted stool" width="1024" height="1024" loading="lazy">
+            
+            <span class="g-over"><small>Franco's Furniture &amp; Air Conditioning</small><b data-i18n="fr.r3">Vanity</b><span class="g-detail" data-i18n="g.room">A room image made for their showroom furniture.</span></span>
+          </a>
+          <a class="g-item" href="assets/img/work/francos-kitchen.webp" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="image">
+            <img src="assets/img/work/francos-kitchen.webp" alt="Oak kitchen cabinets with a stainless range" width="1536" height="1024" loading="lazy">
+            
+            <span class="g-over"><small>Franco's Furniture &amp; Air Conditioning</small><b data-i18n="fr.r4">Kitchen</b><span class="g-detail" data-i18n="g.room">A room image made for their showroom furniture.</span></span>
+          </a>
+          <a class="g-item" href="assets/video/call-text-1.mp4" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="video">
+            <img src="assets/video/posters/call-text-1.jpg" alt="Video ad for a bedroom set" width="405" height="720" loading="lazy">
+            <svg class="g-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="g-over"><small>Franco's Furniture &amp; Air Conditioning</small><b data-i18n="fr.v1">Video ad: bedroom set</b><span class="g-detail" data-i18n="g.bed">A video ad that shows off their bedroom sets.</span></span>
+          </a>
+          <a class="g-item" href="assets/video/call-text-2.mp4" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="video">
+            <img src="assets/video/posters/call-text-2.jpg" alt="Second video ad for a bedroom set" width="405" height="720" loading="lazy">
+            <svg class="g-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="g-over"><small>Franco's Furniture &amp; Air Conditioning</small><b data-i18n="fr.v2">Video ad: bedroom set, version 2</b><span class="g-detail" data-i18n="g.bed">A video ad that shows off their bedroom sets.</span></span>
+          </a>
+          <a class="g-item" href="assets/video/menu-showcase-1.mp4" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="video">
+            <img src="assets/video/posters/menu-showcase-1.jpg" alt="Menu showcase: El Rey del Catán" width="405" height="720" loading="lazy">
+            <svg class="g-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="g-over"><b data-i18n="vid.1">Menu showcase: El Rey del Catán</b><span class="g-detail" data-i18n="g.reel">A short vertical video for reels, TikTok, and stories.</span></span>
+          </a>
+          <a class="g-item" href="assets/video/menu-showcase-2.mp4" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="video">
+            <img src="assets/video/posters/menu-showcase-2.jpg" alt="Designed to sell" width="405" height="720" loading="lazy">
+            <svg class="g-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="g-over"><b data-i18n="vid.2">"Designed to sell"</b><span class="g-detail" data-i18n="g.reel">A short vertical video for reels, TikTok, and stories.</span></span>
+          </a>
+          <a class="g-item" href="assets/video/menu-showcase-3.mp4" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="video">
+            <img src="assets/video/posters/menu-showcase-3.jpg" alt="What makes a menu sell" width="405" height="720" loading="lazy">
+            <svg class="g-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="g-over"><b data-i18n="vid.3">What makes a menu sell</b><span class="g-detail" data-i18n="g.reel">A short vertical video for reels, TikTok, and stories.</span></span>
+          </a>
+          <a class="g-item" href="assets/video/menu-showcase-4.mp4" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="video">
+            <img src="assets/video/posters/menu-showcase-4.jpg" alt="Common menu mistakes" width="405" height="720" loading="lazy">
+            <svg class="g-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="g-over"><b data-i18n="vid.4">Common menu mistakes</b><span class="g-detail" data-i18n="g.reel">A short vertical video for reels, TikTok, and stories.</span></span>
+          </a>
+          <a class="g-item" href="assets/video/menu-showcase-5.mp4" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="video">
+            <img src="assets/video/posters/menu-showcase-5.jpg" alt="How a menu comes together" width="405" height="720" loading="lazy">
+            <svg class="g-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="g-over"><b data-i18n="vid.5">How a menu comes together</b><span class="g-detail" data-i18n="g.reel">A short vertical video for reels, TikTok, and stories.</span></span>
+          </a>
+          <a class="g-item" href="assets/video/menu-tip-1.mp4" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="video">
+            <img src="assets/video/posters/menu-tip-1.jpg" alt="Menu tip: mark your star dish" width="405" height="720" loading="lazy">
+            <svg class="g-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="g-over"><b data-i18n="vid.6">Menu tip: mark your star dish</b><span class="g-detail" data-i18n="g.reel">A short vertical video for reels, TikTok, and stories.</span></span>
+          </a>
+          <a class="g-item" href="assets/video/menu-tip-2.mp4" target="_blank" rel="noopener" data-cat="ads" data-need="Ads" data-kind="video">
+            <img src="assets/video/posters/menu-tip-2.jpg" alt="Your menu in 3 steps" width="405" height="720" loading="lazy">
+            <svg class="g-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="g-over"><b data-i18n="vid.7">Your menu in 3 steps</b><span class="g-detail" data-i18n="g.reel">A short vertical video for reels, TikTok, and stories.</span></span>
+          </a>
         </div>
 
       </div>
@@ -531,7 +577,7 @@
               <li data-i18n="pkg.1.l4">Flyer</li>
               <li data-i18n="pkg.1.l5">3 social media posts</li>
             </ul>
-            <a class="btn btn-primary" href="#contact" data-i18n="cta.start">Get Started</a>
+            <a class="btn btn-primary" href="#contact" data-need="Package" data-i18n="cta.start">Get Started</a>
           </article>
           <article class="price-card featured">
             <span class="badge" data-i18n="price.rec">Recommended</span>
@@ -544,7 +590,7 @@
               <li data-i18n="pkg.2.l4">Made to match your brand</li>
               <li data-i18n="pkg.2.l5">Add 2 reels a month</li>
             </ul>
-            <a class="btn btn-primary" href="#contact" data-i18n="cta.start">Get Started</a>
+            <a class="btn btn-primary" href="#contact" data-need="Package" data-i18n="cta.start">Get Started</a>
           </article>
           <article class="price-card">
             <h3 data-i18n="pkg.3.t">Seasonal Packs</h3>
@@ -557,7 +603,7 @@
               <li data-i18n="pkg.3.l5">Día de los Muertos</li>
               <li data-i18n="pkg.3.l6">Christmas</li>
             </ul>
-            <a class="btn btn-primary" href="#contact" data-i18n="cta.start">Get Started</a>
+            <a class="btn btn-primary" href="#contact" data-need="Package" data-i18n="cta.start">Get Started</a>
           </article>
         </div>
 
@@ -673,14 +719,16 @@
           <h2 data-i18n="contact.title">Ready to get your business noticed?</h2>
           <p data-i18n="contact.lead">Call or text us, or send a message with the form. We usually reply the same day.</p>
 
+          <div class="direct-btns">
+            <a class="btn btn-primary" href="tel:+19568442891"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-i18n="contact.call">Call</span></a>
+            <a class="btn btn-cta" href="sms:+19568442891"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span data-i18n="contact.text">Text</span></a>
+            <a class="btn btn-outline" href="https://wa.me/19568442891" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 9c0 3.5 2.5 6 6 6l1-1.5-2-1-1 .7c-1-.4-1.8-1.2-2.2-2.2l.7-1-1-2z"/></svg>WhatsApp</a>
+          </div>
+
           <ul class="contact-list">
             <li>
               <span class="ci"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
-              <div><small data-i18n="contact.call">Call</small><a href="tel:+19568442891">(956) 844-2891</a></div>
-            </li>
-            <li>
-              <span class="ci"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-              <div><small data-i18n="contact.text">Text</small><a href="sms:+19568442891">(956) 844-2891</a></div>
+              <div><small data-i18n="contact.phone">Phone</small><a href="tel:+19568442891">(956) 844-2891</a></div>
             </li>
             <li>
               <span class="ci"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
@@ -695,19 +743,15 @@
 
         <form class="contact-form" id="contact-form" novalidate>
           <div class="field">
-            <label for="f-name" data-i18n="form.name">Your name</label>
+            <label for="f-name" data-i18n="form.name">Name / Business</label>
             <input id="f-name" name="name" autocomplete="name" required>
           </div>
           <div class="field">
-            <label for="f-biz" data-i18n="form.biz">Business name</label>
-            <input id="f-biz" name="business" autocomplete="organization">
+            <label for="f-contact" data-i18n="form.contact">Phone or Email</label>
+            <input id="f-contact" name="contact" autocomplete="on" required>
           </div>
-          <div class="field">
-            <label for="f-phone" data-i18n="form.phone">Phone</label>
-            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
-          </div>
-          <div class="field">
-            <label for="f-need" data-i18n="form.need">What do you need?</label>
+          <div class="field full">
+            <label for="f-need" data-i18n="form.need">Service Needed</label>
             <select id="f-need" name="need">
               <option value="Ads" data-i18n="form.o1">Ads &amp; social media</option>
               <option value="Branding" data-i18n="form.o2">Logo &amp; business cards</option>
@@ -719,12 +763,12 @@
             </select>
           </div>
           <div class="field full">
-            <label for="f-msg" data-i18n="form.msg">Tell us about your business</label>
+            <label for="f-msg" data-i18n="form.msg">Project Details / Needed-By Date</label>
             <textarea id="f-msg" name="message" rows="4"></textarea>
           </div>
           <!-- Honeypot: hidden from people, bots fill it in -->
           <div class="hp" aria-hidden="true"><label for="f-hp">Leave this empty</label><input id="f-hp" name="_honey" tabindex="-1" autocomplete="off"></div>
-          <p class="form-error" id="form-error" role="alert" hidden data-i18n="form.err">Please add your name and phone number.</p>
+          <p class="form-error" id="form-error" role="alert" hidden data-i18n="form.err">Please add your name and a phone number or email.</p>
           <button class="btn btn-cta full" type="submit" data-i18n="form.send">Send Message</button>
           <p class="form-status" id="form-status" role="status" hidden></p>
           <p class="form-hint" data-i18n="form.hint">We'll only use your info to reply to you. See the <a href="privacy.html">privacy policy</a>.</p>
@@ -777,13 +821,26 @@
     </div>
   </footer>
 
+  <!-- Gallery lightbox -->
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lb-title">
+    <button class="lb-close" type="button" aria-label="Close"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="lb-media" id="lb-media"></div>
+    <div class="lb-info">
+      <small id="lb-client"></small>
+      <h3 id="lb-title"></h3>
+      <p id="lb-detail"></p>
+      <a class="btn btn-primary" id="lb-order" href="#contact" data-i18n="lb.order">Order Something Like This</a>
+      <a class="btn btn-outline" id="lb-pdf" target="_blank" rel="noopener" hidden data-i18n="lb.pdf">Open PDF</a>
+    </div>
+  </dialog>
+
   <!-- Sticky call/text bar on phones -->
   <div class="mobile-bar">
     <a href="tel:+19568442891" class="mb-call"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-i18n="contact.call">Call</span></a>
     <a href="sms:+19568442891" class="mb-text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span data-i18n="contact.text">Text</span></a>
   </div>
 
-  <script src="assets/js/i18n.js?v=202610301400"></script>
-  <script src="assets/js/main.js?v=202610301400"></script>
+  <script src="assets/js/i18n.js?v=202610301410"></script>
+  <script src="assets/js/main.js?v=202610301410"></script>
 </body>
 </html>

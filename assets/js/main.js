@@ -27,8 +27,16 @@
   // Header shadow once the page scrolls
   var header = document.querySelector('.site-header');
   if (header) {
-    var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 8); };
+    var progress = document.getElementById('scroll-progress');
+    var onScroll = function () {
+      header.classList.toggle('scrolled', window.scrollY > 8);
+      if (progress) {
+        var max = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.transform = 'scaleX(' + (max > 0 ? window.scrollY / max : 0) + ')';
+      }
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
     onScroll();
   }
 
@@ -41,6 +49,82 @@
       });
     }, { rootMargin: '0px 0px -40px 0px' });
     targets.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  }
+
+  // Any link with data-need jumps to the contact form with that service already picked.
+  var needSelect = document.getElementById('f-need');
+  document.querySelectorAll('a[data-need]:not(.g-item)').forEach(function (a) {
+    a.addEventListener('click', function () { if (needSelect) needSelect.value = a.getAttribute('data-need'); });
+  });
+
+  // Work gallery: filter pills. A pill stays hidden until it has work to show.
+  var gallery = document.getElementById('gallery');
+  if (gallery) {
+    var items = Array.prototype.slice.call(gallery.querySelectorAll('.g-item'));
+    var pills = document.querySelectorAll('[data-g-filter]');
+    var setFilter = function (cat) {
+      items.forEach(function (it) { it.hidden = cat !== 'all' && it.getAttribute('data-cat') !== cat; });
+      pills.forEach(function (p) { p.setAttribute('aria-pressed', String(p.getAttribute('data-g-filter') === cat)); });
+    };
+    pills.forEach(function (p) {
+      var cat = p.getAttribute('data-g-filter');
+      p.hidden = cat !== 'all' && !items.some(function (it) { return it.getAttribute('data-cat') === cat; });
+      p.addEventListener('click', function () { setFilter(cat); });
+    });
+    document.querySelectorAll('a[data-filter]').forEach(function (a) {
+      a.addEventListener('click', function () { setFilter(a.getAttribute('data-filter')); });
+    });
+
+    // Lightbox. Without JavaScript the gallery links still open each file directly.
+    var box = document.getElementById('lightbox');
+    var media = document.getElementById('lb-media');
+    var order = document.getElementById('lb-order');
+    var pdf = document.getElementById('lb-pdf');
+    var current = null;
+    var closeBtn = box.querySelector('.lb-close');
+    closeBtn.setAttribute('aria-label', t('lb.close', 'Close'));
+
+    items.forEach(function (it) {
+      it.addEventListener('click', function (e) {
+        e.preventDefault();
+        current = it;
+        var thumb = it.querySelector('img');
+        var el;
+        if (it.getAttribute('data-kind') === 'video') {
+          el = document.createElement('video');
+          el.controls = true;
+          el.autoplay = true;
+          el.playsInline = true;
+          el.poster = thumb.getAttribute('src');
+        } else {
+          el = document.createElement('img');
+          el.alt = thumb.alt;
+        }
+        el.src = it.getAttribute('href');
+        media.innerHTML = '';
+        media.appendChild(el);
+        var client = it.querySelector('small');
+        document.getElementById('lb-client').textContent = client ? client.textContent : '';
+        document.getElementById('lb-title').textContent = it.querySelector('b').textContent;
+        document.getElementById('lb-detail').textContent = it.querySelector('.g-detail').textContent;
+        var file = it.getAttribute('data-pdf');
+        pdf.hidden = !file;
+        if (file) pdf.href = file; else pdf.removeAttribute('href');
+        box.showModal();
+      });
+    });
+
+    closeBtn.addEventListener('click', function () { box.close(); });
+    box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
+    box.addEventListener('close', function () { media.innerHTML = ''; });
+
+    // "Order Something Like This": pre-fill the form, then let the link scroll to it.
+    order.addEventListener('click', function () {
+      if (needSelect && current) needSelect.value = current.getAttribute('data-need');
+      var msg = document.getElementById('f-msg');
+      if (msg && current) msg.value = t('form.prefill', "I'd like something like this: ") + current.querySelector('b').textContent + '. ';
+      box.close();
+    });
   }
 
   // Contact form: sent through FormSubmit (free, no account) to the RF Digital inbox.
@@ -60,8 +144,8 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var d = form.elements;
-      var missing = [d.name, d.phone].filter(function (f) { return !f.value.trim(); });
-      [d.name, d.phone].forEach(function (f) { f.setAttribute('aria-invalid', String(missing.indexOf(f) > -1)); });
+      var missing = [d.name, d.contact].filter(function (f) { return !f.value.trim(); });
+      [d.name, d.contact].forEach(function (f) { f.setAttribute('aria-invalid', String(missing.indexOf(f) > -1)); });
       if (missing.length) { err.hidden = false; missing[0].focus(); return; }
       err.hidden = true;
       status.hidden = true;
@@ -71,8 +155,7 @@
 
       var payload = {
         name: d.name.value.trim(),
-        business: d.business.value.trim(),
-        phone: d.phone.value.trim(),
+        contact: d.contact.value.trim(),
         interested_in: d.need.value,
         message: d.message.value.trim(),
         _subject: 'Marketing inquiry from ' + d.name.value.trim(),
@@ -96,7 +179,7 @@
         })
         .catch(function () {
           var body = [
-            'Name: ' + payload.name, 'Business: ' + payload.business, 'Phone: ' + payload.phone,
+            'Name / business: ' + payload.name, 'Phone or email: ' + payload.contact,
             'Interested in: ' + payload.interested_in, '', payload.message
           ].join('\n');
           var mailto = 'mailto:rfdigitaltx@gmail.com?subject=' + encodeURIComponent(payload._subject) + '&body=' + encodeURIComponent(body);
