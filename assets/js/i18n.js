@@ -73,7 +73,7 @@ window.RF_ES = {
   "faq.3.q": "¿Qué necesito para empezar?",
   "faq.3.a": "Tu logo si tienes uno, algunas fotos de tus productos o comida, y lo que quieres promocionar. Si no tienes buenas fotos, lo resolvemos juntos.",
   "faq.4.q": "¿Cuánto tiempo tarda?",
-  "faq.4.a": "La mayoría de los anuncios y posts están listos en uno o dos días. Los menús normalmente tardan como una semana después de que tengamos tu información.",
+  "faq.4.a": "Como una o dos semanas después de tu primer anticipo, dependiendo del trabajo.",
   "faq.5.q": "¿Puedo pedir cambios?",
   "faq.5.a": "Sí. Cada proyecto incluye una ronda de cambios. Solo mándanos un texto con lo que quieres diferente y nosotros nos encargamos.",
   "faq.6.q": "¿Mi marketing puede estar en español?",
