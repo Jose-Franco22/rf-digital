@@ -6,13 +6,13 @@
   <title>Digital Marketing for Local Businesses | RF Digital</title>
   <meta name="description" content="RF Digital designs ads, social posts, logos, business cards, banners, signs, and menus for local businesses, plus invitations and banners for parties and events.">
   <link rel="canonical" href="https://jose-franco22.github.io/rf-digital/">
-  <meta name="theme-color" content="#FFFFFF">
+  <meta name="theme-color" content="#0A0C14">
   <script>
     // Set the theme before the page paints so dark mode never flashes white.
     (function () {
       var t = null;
       try { t = localStorage.getItem('rf-theme'); } catch (e) {}
-      if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      if (t !== 'light' && t !== 'dark') t = 'dark';
       document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
@@ -21,7 +21,7 @@
   <meta property="og:title" content="RF Digital | Design for local businesses, parties &amp; events">
   <meta property="og:description" content="Ads, social posts, banners, menus, and invitations for local businesses, parties, and events.">
   <meta property="og:url" content="https://jose-franco22.github.io/rf-digital/">
-  <meta property="og:image" content="https://jose-franco22.github.io/rf-digital/assets/img/og-image.png?v=5">
+  <meta property="og:image" content="https://jose-franco22.github.io/rf-digital/assets/img/og-image.png?v=202610301353">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="RF Digital: make it stand out. Ads, print, menus, parties and events.">
@@ -35,8 +35,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261029g">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css?v=202610301353">
 
   <script type="application/ld+json">
   {
@@ -100,11 +100,11 @@
           <h1 data-i18n="hero.title">Make it stand out.</h1>
           <p class="lead" data-i18n="hero.lead">We design ads, social posts, banners, and menus that make people stop scrolling and come see what you offer, plus invitations and banners for your next party.</p>
           <div class="btn-row">
-            <a class="btn btn-primary" href="#work" data-i18n="cta.work">See Our Work</a>
-            <a class="btn btn-cta" href="tel:+19568442891">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-              <span data-i18n="cta.call">Call or Text</span>
+            <a class="btn btn-primary" href="#work">
+              <span data-i18n="cta.work">See Our Work</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
             </a>
+            <a class="btn btn-outline" href="tel:+19568442891" data-i18n="cta.call">Call or Text</a>
           </div>
           <ul class="hero-points">
             <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hero.p1">Ads, print, menus &amp; more</span></li>
@@ -113,6 +113,44 @@
           </ul>
         </div>
 
+        <!-- Hero collage: real client work, decorative because it repeats in "Recent work" -->
+        <div class="hero-stage" aria-hidden="true">
+          <img class="piece p-cover" src="assets/img/work/rey-del-catan-cover.webp" alt="" width="1200" height="1553">
+          <img class="piece p-menu" src="assets/img/work/rey-del-catan-menu.webp" alt="" width="1200" height="1553">
+          <img class="piece p-logo" src="assets/img/work/francos-logo.webp" alt="" width="1024" height="1024">
+          <img class="piece p-banner" src="assets/img/work/francos-banner.webp" alt="" width="1024" height="390">
+          <span class="piece p-phone"><img src="assets/img/work/rey-del-catan-phone-menu.webp" alt="" width="433" height="900"></span>
+          <span class="piece p-phone p-phone-2"><img src="assets/video/posters/el-rey-del-catan-ad.jpg" alt="" width="405" height="720"></span>
+          <span class="piece p-invite"><small data-i18n="hero.inviteTop">You're invited</small><b data-i18n="hero.inviteMain">Let's celebrate</b></span>
+        </div>
+
+        <div class="hero-tiles">
+          <a class="tile" href="#services">
+            <h2 data-i18n="tile.1.t">Menus</h2>
+            <p data-i18n="tile.1.d">Printed, phone, and TV menus, plus QR codes.</p>
+            <img src="assets/img/work/rey-del-catan-menu.webp" alt="" width="1200" height="1553">
+          </a>
+          <a class="tile" href="#services">
+            <h2 data-i18n="tile.2.t">Print &amp; Signs</h2>
+            <p data-i18n="tile.2.d">Banners, flyers, yard signs, and window vinyl.</p>
+            <img src="assets/img/work/francos-banner.webp" alt="" width="1024" height="390">
+          </a>
+          <a class="tile" href="#services">
+            <h2 data-i18n="tile.3.t">Ads &amp; Social</h2>
+            <p data-i18n="tile.3.d">Posts, ads, and short videos for the feed.</p>
+            <img src="assets/video/posters/el-rey-del-catan-ad.jpg" alt="" width="405" height="720">
+          </a>
+          <a class="tile tile-wide" href="#services">
+            <h2 data-i18n="tile.4.t">Branding</h2>
+            <p data-i18n="tile.4.d">Logos, business cards, and a look people remember.</p>
+            <img src="assets/img/work/francos-logo.webp" alt="" width="1024" height="1024">
+          </a>
+          <a class="tile tile-wide" href="#events">
+            <h2 data-i18n="tile.5.t">Events &amp; Decor</h2>
+            <p data-i18n="tile.5.d">Invitations, backdrop banners, and party packs.</p>
+            <span class="tile-invite" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4-3.9-3.8 5.4-.8z"/></svg></span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -326,7 +364,7 @@
     </section>
 
     <!-- ===================== HOW IT WORKS ===================== -->
-    <section class="section section-teal">
+    <section class="section section-band">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow eyebrow-light" data-i18n="how.eyebrow">How it works</p>
@@ -749,7 +787,7 @@
     <a href="sms:+19568442891" class="mb-text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span data-i18n="contact.text">Text</span></a>
   </div>
 
-  <script src="assets/js/i18n.js?v=20261029k"></script>
-  <script src="assets/js/main.js?v=20261028a"></script>
+  <script src="assets/js/i18n.js?v=202610301353"></script>
+  <script src="assets/js/main.js?v=202610301353"></script>
 </body>
 </html>

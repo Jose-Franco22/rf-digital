@@ -108,12 +108,12 @@
     });
   }
 
-  // Light/dark theme. Follows the device until the visitor picks one, then remembers it.
+  // Light/dark theme. Dark by default until the visitor picks one, then remembers it.
   var themeBtn = document.querySelector('.theme-toggle');
   var themeMeta = document.querySelector('meta[name="theme-color"]');
   function applyTheme(th) {
     root.setAttribute('data-theme', th);
-    if (themeMeta) themeMeta.content = th === 'dark' ? '#0B1A1F' : '#FFFFFF';
+    if (themeMeta) themeMeta.content = th === 'dark' ? '#0A0C14' : '#F7F7FC';
     if (themeBtn) themeBtn.setAttribute('aria-label', th === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
   }
   applyTheme(root.getAttribute('data-theme') || 'light');
@@ -124,13 +124,6 @@
       try { localStorage.setItem('rf-theme', next); } catch (e) {}
     });
   }
-  var mq = window.matchMedia('(prefers-color-scheme: dark)');
-  var onSystemChange = function (e) {
-    var saved = null;
-    try { saved = localStorage.getItem('rf-theme'); } catch (er) {}
-    if (!saved) applyTheme(e.matches ? 'dark' : 'light');
-  };
-  if (mq.addEventListener) mq.addEventListener('change', onSystemChange); else mq.addListener(onSystemChange);
 
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
