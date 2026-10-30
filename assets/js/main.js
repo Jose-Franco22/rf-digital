@@ -113,7 +113,7 @@
   var themeMeta = document.querySelector('meta[name="theme-color"]');
   function applyTheme(th) {
     root.setAttribute('data-theme', th);
-    if (themeMeta) themeMeta.content = th === 'dark' ? '#0A0C14' : '#F7F7FC';
+    if (themeMeta) themeMeta.content = th === 'dark' ? '#081214' : '#F4FAF9';
     if (themeBtn) themeBtn.setAttribute('aria-label', th === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
   }
   applyTheme(root.getAttribute('data-theme') || 'light');
