@@ -174,9 +174,8 @@ p { margin: 0 0 1em; }
 /* Collage of real client work */
 .hero-stage { grid-area: stage; position: relative; aspect-ratio: 1 / 1.12; align-self: center; }
 .piece { position: absolute; border-radius: 10px; box-shadow: 0 24px 50px rgba(5, 6, 20, .55); transform-origin: center; transition: transform .35s ease; }
-.p-cover { left: 3%; top: 1%; width: 31%; transform: perspective(1200px) rotateY(14deg) rotateZ(-7deg); }
-.p-menu { left: 30%; top: 4%; width: 33%; transform: perspective(1200px) rotateY(-10deg) rotateZ(4deg); }
-.p-logo { right: 1%; top: 3%; width: 30%; border-radius: 16px; background: #fff; transform: perspective(1200px) rotateY(-16deg) rotateZ(6deg); }
+.p-cover { left: 7%; top: 1%; width: 34%; transform: perspective(1200px) rotateY(14deg) rotateZ(-7deg); }
+.p-logo { right: 6%; top: 5%; width: 32%; border-radius: 16px; background: #fff; transform: perspective(1200px) rotateY(-16deg) rotateZ(6deg); }
 .p-sign { left: 5%; top: 50%; width: 36%; transform: perspective(1200px) rotateY(12deg) rotateZ(-4deg); }
 .p-invite {
   right: 0; top: 37%; width: 36%; aspect-ratio: 3 / 4; padding: 7% 5%; container-type: inline-size;
