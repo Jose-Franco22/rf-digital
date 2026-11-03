@@ -179,6 +179,7 @@ p { margin: 0 0 1em; }
 .p-logo { right: 1%; top: 3%; width: 30%; border-radius: 16px; background: #fff; transform: perspective(1200px) rotateY(-16deg) rotateZ(6deg); }
 .p-sign { left: 5%; top: 50%; width: 36%; transform: perspective(1200px) rotateY(12deg) rotateZ(-4deg); }
 .p-face { right: 3%; top: 26%; width: 24%; z-index: 2; border-radius: 0; box-shadow: none; filter: drop-shadow(0 20px 30px rgba(5, 6, 20, .55)); transform: perspective(1200px) rotateY(-14deg) rotateZ(5deg); }
+.p-yard { left: 42%; top: 42%; width: 29%; border-radius: 0; box-shadow: none; filter: drop-shadow(0 20px 30px rgba(5, 6, 20, .55)); transform: perspective(1200px) rotateY(-12deg) rotateZ(3deg); }
 .p-senior { left: 40%; top: 62%; width: 27%; border-radius: 0; box-shadow: none; filter: drop-shadow(0 20px 30px rgba(5, 6, 20, .55)); transform: perspective(1200px) rotateY(10deg) rotateZ(-3deg); }
 .p-phone {
   left: 42%; top: 64%; width: 22%; padding: 1.1%; border-radius: 22px; background: #0B0D18;
