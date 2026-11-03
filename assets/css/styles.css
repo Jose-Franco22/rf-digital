@@ -174,20 +174,11 @@ p { margin: 0 0 1em; }
 /* Collage of real client work */
 .hero-stage { grid-area: stage; position: relative; aspect-ratio: 1 / 1.12; align-self: center; }
 .piece { position: absolute; border-radius: 10px; box-shadow: 0 24px 50px rgba(5, 6, 20, .55); transform-origin: center; transition: transform .35s ease; }
-.p-cover { left: 7%; top: 1%; width: 34%; transform: perspective(1200px) rotateY(14deg) rotateZ(-7deg); }
-.p-logo { right: 6%; top: 5%; width: 32%; border-radius: 16px; background: #fff; transform: perspective(1200px) rotateY(-16deg) rotateZ(6deg); }
+.p-cover { left: 3%; top: 1%; width: 31%; transform: perspective(1200px) rotateY(14deg) rotateZ(-7deg); }
+.p-xv { left: 30%; top: 4%; width: 33%; transform: perspective(1200px) rotateY(-10deg) rotateZ(4deg); }
+.p-logo { right: 1%; top: 3%; width: 30%; border-radius: 16px; background: #fff; transform: perspective(1200px) rotateY(-16deg) rotateZ(6deg); }
 .p-sign { left: 5%; top: 50%; width: 36%; transform: perspective(1200px) rotateY(12deg) rotateZ(-4deg); }
-.p-invite {
-  right: 0; top: 37%; width: 36%; aspect-ratio: 3 / 4; padding: 7% 5%; container-type: inline-size;
-  display: flex; flex-direction: column; justify-content: flex-end; gap: 4px; color: #fff;
-  background:
-    radial-gradient(70% 50% at 80% 12%, rgba(255,255,255,.35), transparent 70%),
-    linear-gradient(150deg, #0E7490, #0F766E 50%, #047857);
-  border: 1px solid rgba(255,255,255,.3);
-  transform: perspective(1200px) rotateY(-14deg) rotateZ(5deg);
-}
-.p-invite small { font: 600 7cqw var(--font-body); letter-spacing: .1em; text-transform: uppercase; opacity: .9; }
-.p-invite b { font: 900 15cqw/1.02 var(--font-heading); }
+.p-face { right: 3%; top: 26%; width: 24%; z-index: 2; border-radius: 0; box-shadow: none; filter: drop-shadow(0 20px 30px rgba(5, 6, 20, .55)); transform: perspective(1200px) rotateY(-14deg) rotateZ(5deg); }
 .p-phone {
   left: 42%; top: 64%; width: 22%; padding: 1.1%; border-radius: 22px; background: #0B0D18;
   border: 1px solid rgba(255,255,255,.2); transform: perspective(1200px) rotateY(10deg) rotateZ(-3deg);

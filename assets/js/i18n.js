@@ -18,8 +18,6 @@ window.RF_ES = {
   "hero.p1": "Anuncios, impresos, menús y más",
   "hero.p2": "Inglés y español",
   "hero.p3": "Trabajamos contigo desde cualquier lugar",
-  "hero.inviteTop": "Estás invitado",
-  "hero.inviteMain": "¡A celebrar!",
   "tile.1.t": "Menús",
   "tile.1.d": "Menús impresos, para celular y TV, con códigos QR.",
   "tile.2.t": "Impresos y letreros",
