@@ -297,6 +297,8 @@ window.RF_ES = {
   "g.mk.menu": "Un menú de mesa con secciones, precios y un especial que resalta.",
   "g.mk.flag.t": "Bandera publicitaria",
   "g.mk.flag": "Una bandera que les dice a los que pasan que estás abierto.",
+  "g.mk.windows.t": "Viniles para ventanas",
+  "g.mk.windows": "Viniles que convierten tu local en un letrero que se ve desde la calle.",
   "g.mk.flyer.t": "Volante",
   "g.mk.flyer": "Un volante de una página con fotos, lista de servicios y un número de teléfono grande.",
   "g.mk.cards.t": "Tarjetas de presentación",
