@@ -14,7 +14,7 @@ python3 -m http.server 8000
 - `index.html`: the whole site (English copy lives here)
 - `assets/js/i18n.js`: Spanish copy, keyed by each element's `data-i18n` value
 - `assets/js/main.js`: mobile menu, scroll effects, contact form
-- `assets/css/styles.css`: brand tokens at the top (colors match the logo files)
+- `assets/css/styles.css`: design tokens at the top (dark is the default look, light is the toggle)
 - `assets/img/`: logos, favicons, social preview image (`og-image.png`), Jose's photo
 - `privacy.html`: privacy policy (English and Spanish blocks, switched by the EN/ES toggle)
 - `404.html`: "page not found" page
