@@ -179,6 +179,7 @@ p { margin: 0 0 1em; }
 .p-logo { right: 1%; top: 3%; width: 30%; border-radius: 16px; background: #fff; transform: perspective(1200px) rotateY(-16deg) rotateZ(6deg); }
 .p-sign { left: 5%; top: 50%; width: 36%; transform: perspective(1200px) rotateY(12deg) rotateZ(-4deg); }
 .p-face { right: 3%; top: 26%; width: 24%; z-index: 2; border-radius: 0; box-shadow: none; filter: drop-shadow(0 20px 30px rgba(5, 6, 20, .55)); transform: perspective(1200px) rotateY(-14deg) rotateZ(5deg); }
+.p-senior { left: 40%; top: 62%; width: 27%; border-radius: 0; box-shadow: none; filter: drop-shadow(0 20px 30px rgba(5, 6, 20, .55)); transform: perspective(1200px) rotateY(10deg) rotateZ(-3deg); }
 .p-phone {
   left: 42%; top: 64%; width: 22%; padding: 1.1%; border-radius: 22px; background: #0B0D18;
   border: 1px solid rgba(255,255,255,.2); transform: perspective(1200px) rotateY(10deg) rotateZ(-3deg);
@@ -205,10 +206,8 @@ p { margin: 0 0 1em; }
 .tile h2 { font-size: 1.02rem; font-weight: 700; margin: 0 0 4px; letter-spacing: 0; }
 .tile p { position: relative; z-index: 1; margin: 0; font-size: .78rem; line-height: 1.35; color: var(--slate); max-width: 58%; }
 .tile h2 { position: relative; z-index: 1; }
-.tile img, .tile-invite { position: absolute; right: -8px; top: 46px; width: 38%; aspect-ratio: 4 / 5; object-fit: cover; object-position: left top; border-radius: 8px; transform: rotate(6deg); box-shadow: 0 8px 20px rgba(5, 6, 20, .5); }
-.tile-wide img, .tile-wide .tile-invite { top: 18px; width: 25%; }
-.tile-invite { display: grid; place-items: center; background: linear-gradient(150deg, #0E7490, #0F766E 50%, #047857); }
-.tile-invite svg { width: 45%; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linejoin: round; }
+.tile img { position: absolute; right: -8px; top: 46px; width: 38%; aspect-ratio: 4 / 5; object-fit: cover; object-position: left top; border-radius: 8px; transform: rotate(6deg); box-shadow: 0 8px 20px rgba(5, 6, 20, .5); }
+.tile-wide img { top: 18px; width: 25%; }
 
 
 /* Proof bar */
@@ -254,8 +253,7 @@ p { margin: 0 0 1em; }
 .svc-thumb-top img { object-position: top; }
 .svc-thumb-logo { background: #fff; }
 .svc-thumb-logo img { object-fit: contain; }
-.svc-thumb-invite { display: grid; place-items: center; background: linear-gradient(150deg, #0E7490, #0F766E 50%, #047857); }
-.svc-thumb-invite svg { width: 56px; fill: none; stroke: #fff; stroke-width: 1.6; stroke-linejoin: round; }
+.svc-thumb-invite img { object-position: center 35%; }
 .card-links { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; font-size: .92rem; font-weight: 600; }
 .card-links a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; }
 .card-links a:hover { text-decoration: underline; }
@@ -474,7 +472,7 @@ p { margin: 0 0 1em; }
   .tile, .tile-wide { grid-column: span 1; }
   .tile-wide:last-child { grid-column: 1 / -1; }
   .tile { min-height: 168px; }
-  .tile img, .tile-invite, .tile-wide img, .tile-wide .tile-invite { top: auto; bottom: -22px; width: 34%; }
+  .tile img, .tile-wide img { top: auto; bottom: -22px; width: 34%; }
   .tile:not(:last-child) p { max-width: 62%; }
   .p-phone { border-radius: 14px; }
   .p-phone img { border-radius: 10px; }
