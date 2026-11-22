@@ -42,7 +42,7 @@
 
   // Fade sections in as they scroll into view
   if ('IntersectionObserver' in window) {
-    var targets = document.querySelectorAll('.section-head, .card, .why, .steps li, .work-card, .price-card, .menu-pricing, .about-grid > *, .contact-grid > *');
+    var targets = document.querySelectorAll('.section-head, .card, .why, .steps li, .work-card, .price-card, .menu-pricing, .contact-grid > *');
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }

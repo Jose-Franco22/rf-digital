@@ -261,20 +261,6 @@ p { margin: 0 0 1em; }
 .card-links a:last-child { color: var(--slate); }
 .card-links .icon { width: 16px; height: 16px; }
 
-/* About */
-.about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: center; }
-.owner { margin: 0; }
-.owner-photo {
-  aspect-ratio: 1 / 1; max-width: 440px; border-radius: var(--radius-lg); position: relative; overflow: hidden;
-  background: var(--brand-light);
-  box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 24px 70px var(--glow-a);
-}
-.owner-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.owner figcaption { margin-top: 28px; display: flex; flex-direction: column; }
-.owner figcaption b { font-family: var(--font-heading); font-size: 1.15rem; }
-.owner figcaption span { color: var(--slate); font-size: .95rem; }
-.about-copy > p:not(.eyebrow) { color: var(--slate); }
-
 .checklist { list-style: none; padding: 0; margin: 0 0 28px; }
 .checklist li { position: relative; padding-left: 32px; margin-bottom: 10px; }
 .checklist li::before {
@@ -456,8 +442,7 @@ p { margin: 0 0 1em; }
   .nav a:not(.btn)::after { display: none; }
   .nav-cta-mobile { display: flex; margin-top: 16px; }
   .header-actions { margin-left: auto; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-  .owner { max-width: 340px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .steps { grid-template-columns: 1fr; }
 }
 
